@@ -13,4 +13,11 @@ const tutorials = [
 
 const titleCased = () => {
   return tutorials
+  .map(param => {
+    let newTutorials = param.split(' ')
+    let capFirstLetter = newTutorials.map(capTut => capTut.charAt(0).toUpperCase() + capTut.slice(1))
+    let newCapArray = capFirstLetter.join(' ')
+    return newCapArray;
+
+  })
 }
